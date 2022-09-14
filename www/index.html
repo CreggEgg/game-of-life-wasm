@@ -14,6 +14,23 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				overflow: hidden;
+			}
+			div {
+				display: flex;
+				flex-direction: row;
+			}
+			pre {
+				padding: 10px 10px;
+				border: 2px solid black;
+				border-radius: 5px;
+				cursor: default;
+				font-size: xx-small;
+				user-select: none;
+			}
+
+			button {
+				cursor: pointer;
 			}
 		</style>
 	</head>
@@ -22,6 +39,11 @@
 			>This page contains webassembly and javascript content, please enable
 			javascript in your browser.</noscript
 		>
+		<input id="speed" min="1" max="5" value="1" type="range" />
+		<div>
+			<button id="pause">Unpause</button>
+			<button id="reset">Reset</button>
+		</div>
 		<pre id="game-of-life-canvas"></pre>
 		<script src="./bootstrap.js"></script>
 	</body>
